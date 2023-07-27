@@ -4,3 +4,15 @@ header h1 {
   font-family: sans-serif;
   text-transform: uppercase;
 }
+
+article h2 {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: #1098ad;
+}
+
+article h3 {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #1098ad;
+}
