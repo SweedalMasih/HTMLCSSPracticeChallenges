@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="main-header">
       <h1>The Code Magazine</h1>
 
       <nav>
@@ -29,7 +29,9 @@
           width="50"
         />
 
-        <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+        <p id="author">
+          Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+        </p>
 
         <img
           src="image/post-img.jpg"
@@ -68,7 +70,7 @@
       <p>In HTML, each element is made up of 3 parts:</p>
 
       <ol>
-        <li>The opening tag</li>
+        <li class="first-li">The opening tag</li>
         <li>The closing tag</li>
         <li>The actual element</li>
       </ol>
@@ -90,7 +92,9 @@
       </p>
 
       <ul>
-        <li>To be able to use the fundamental web dev language</li>
+        <li class="first-li">
+          To be able to use the fundamental web dev language
+        </li>
         <li>
           To hand-craft beautiful websites instead of relying on tools like
           Wordpress or Wix
@@ -106,7 +110,7 @@
     <aside>
       <h4>Related posts</h4>
 
-      <ul>
+      <ul class="related">
         <li>
           <img
             src="image/related-1.jpg"
@@ -115,7 +119,7 @@
             width="75"
           />
           <a href="#">How to Learn Web Development</a>
-          <p>By Jonas Schmedtmann</p>
+          <p class="related-author">By Jonas Schmedtmann</p>
         </li>
         <li>
           <img
@@ -125,7 +129,7 @@
             width="75"
           />
           <a href="#">The Unknown Powers of CSS</a>
-          <p>By Jim Dillon</p>
+          <p class="related-author">By Jim Dillon</p>
         </li>
         <li>
           <img
@@ -135,13 +139,13 @@
             width="75"
           />
           <a href="#"> Why JavaScript is Awesome</a>
-          <p>By Matilda</p>
+          <p class="related-author">By Matilda</p>
         </li>
       </ul>
     </aside>
 
     <footer>
-      <p>Copyright &copy; 2027 by The Code Magazine</p>
+      <p id="copyright">Copyright &copy; 2027 by The Code Magazine</p>
     </footer>
   </body>
 </html>
