@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+/* PAGE-SECTIONS */
 body {
   color: #444;
   font-family: sans-serif;
@@ -42,6 +43,7 @@ aside {
   width: 500px;
 }
 
+/* SMALLER ELEMENTS */
 h1,
 h2,
 h3 {
@@ -121,10 +123,6 @@ li:last-child {
   list-style: none;
 }
 
-body {
-  /* background-color: lightgoldenrodyellow; */
-}
-
 /* .first-li {
   font-weight: bold;
 } */
@@ -165,4 +163,14 @@ a:active {
 .post-img {
   width: 100%;
   height: auto;
+}
+
+nav a:link {
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
 }
