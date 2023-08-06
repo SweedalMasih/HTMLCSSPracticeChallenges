@@ -188,6 +188,7 @@ button {
   right: 50px;
 }
 
+/* pseudo elements */
 /* h1::first-letter {
   font-style: normal;
   margin-right: 5px;
@@ -197,6 +198,7 @@ h3 + p::first-line {
   /* color: yellowgreen; */
 }
 
+/* Absolute positioning */
 h2 {
   /* background-color: orange; */
   position: relative;
