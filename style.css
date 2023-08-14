@@ -1,27 +1,28 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* PAGE-SECTIONS */
 body {
   color: #444;
   font-family: sans-serif;
+  border-top: 10px solid #1098ad;
   position: relative;
 }
 
 /* Centering our page */
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
 }
 
 .main-header {
   background-color: #f7f7f7;
-  border-top: 10px solid #1098ad;
   padding: 20px 40px;
   margin-bottom: 60px;
-  height: 80px;
+  /* height: 80px; */
 }
 
 .post-header {
@@ -40,7 +41,7 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding: 50px 0;
+  padding: 50px 40px;
   width: 500px;
 }
 
@@ -78,6 +79,7 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 ul,
@@ -122,6 +124,7 @@ li:last-child {
 
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 /* .first-li {
@@ -236,4 +239,30 @@ h1 {
 
 nav {
   float: right;
+}
+
+/* .clear {
+  clear: both;
+} */
+
+/* clearfix hack */
+.clearfix::after {
+  clear: both;
+  content: "";
+  /* before and after are inline elements and clearing floats like this will work on block level elements */
+  display: block;
+}
+
+article {
+  width: 825px;
+  float: left;
+}
+
+aside {
+  width: 300px;
+  float: right;
+}
+
+footer {
+  clear: both;
 }
