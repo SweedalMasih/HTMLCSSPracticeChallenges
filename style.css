@@ -223,7 +223,7 @@ h2::after {
 /* FLOATS */
 .author-img {
   float: left;
-  margin-bottom: 2mm;
+  margin-bottom: 20px;
 }
 
 .author {
