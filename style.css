@@ -78,3 +78,45 @@ aside {
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
 }
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/* when we mix multiple elements inside parent element then this pseudo classes don't work really well */
+/* this will be applied only if the last element under article is p */
+/* article p:last-child {
+  color: palevioletred;
+} */
+
+/* this will not work because the first element under article is header and not p */
+article p:first-child {
+  color: yellowgreen;
+}
+
+/* styling links (LVHA) */
+/* this will target all the anchor elements which have a href attribute (only targets real links) */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  /* text-decoration: underline dotted orangered; */
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
