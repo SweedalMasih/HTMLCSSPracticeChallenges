@@ -98,8 +98,8 @@ article p:first-child {
   color: yellowgreen;
 }
 
-/* styling links (LVHA) */
-/* this will target all the anchor elements which have a href attribute (only targets real links) */
+/* styling links: LVHA (apply this in order) */
+/* a:link will target all the anchor elements which have a href attribute (only targets real links) */
 a:link {
   color: #1098ad;
   text-decoration: none;
