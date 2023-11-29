@@ -1,11 +1,13 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  font-family: sans-serif;
+/* The universal selector selects every single element on the page, this is useful when we want a certain property to be applied to all the elements and there is no inheritance involved, this can be used when you want to apply a certain propety that does not automatically get inherited to all the elements. Also this has the lowest priority and we can easily override it */
+* {
+  /* border-top: 10px solid #1098ad; */
+}
+
+/* properties added under body gets inherited, for e.g. we want color on all the elements but the color gets inherited hence we added under body. */
+body {
   color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad;
 }
 
 h1,
@@ -119,4 +121,21 @@ a:hover {
 a:active {
   background-color: black;
   font-style: italic;
+}
+
+/* Resolving conflicts, highest to lowest priority:  !important > inline style > ID selector (#) > class(.) or pseudo class (:) selector > element selector > universal selector */
+#copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green;
 }
