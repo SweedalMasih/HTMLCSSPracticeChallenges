@@ -1,6 +1,8 @@
 /* The universal selector selects every single element on the page, this is useful when we want a certain property to be applied to all the elements and there is no inheritance involved, this can be used when you want to apply a certain propety that does not automatically get inherited to all the elements. Also this has the lowest priority and we can easily override it */
 * {
   /* border-top: 10px solid #1098ad; */
+  margin: 0;
+  padding: 0;
 }
 
 /* properties added under body gets inherited, for e.g. we want color on all the elements but the color gets inherited hence we added under body. */
@@ -8,6 +10,29 @@ body {
   color: #444;
   font-family: sans-serif;
   border-top: 10px solid #1098ad;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px; /* margin-bottom is a good option to add vertical space*/
+  height: 80px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 500px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
 }
 
 h1,
@@ -24,10 +49,13 @@ h1 {
 
 h2 {
   font-size: 40px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px; /*The top and bottom margins of blocks are sometimes collapsed into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as margin collapsing. Note that the margins of floating and absolutely positioned elements never collapse, for e.g. here margin-top: 40px will be considered and margin-bottom: 15px of p element will be ignored */
 }
 
 h4 {
@@ -39,10 +67,22 @@ h4 {
 p {
   font-size: 22px;
   line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 30px;
 }
 
 li {
   font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 /* footer p {
@@ -69,16 +109,6 @@ li {
 
 .related {
   list-style: none;
-}
-
-.main-header {
-  background-color: #f7f7f7;
-}
-
-aside {
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
 }
 
 li:first-child {
@@ -138,4 +168,9 @@ a:active {
 
 footer p {
   color: green;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
 }
