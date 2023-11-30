@@ -12,6 +12,14 @@ body {
   border-top: 10px solid #1098ad;
 }
 
+/* This below declaration block will center the content on the page */
+.container {
+  width: 1000px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+}
+
 .main-header {
   background-color: #f7f7f7;
   padding: 20px 40px;
@@ -93,6 +101,16 @@ li:last-child {
   font-style: italic;
 } */
 
+nav a:link {
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block; /* a is an inline element because of which margin-top will not apply, however when we change the display to inline-block then margin-top will be applied */
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
 #author {
   font-style: italic;
   font-size: 16px;
@@ -170,6 +188,7 @@ footer p {
   color: green;
 }
 
+/* img element are inline block elements hence we can add width and height to it and create vertical space using margins whereas we cannot do that for inline elements */
 .post-img {
   width: 100%;
   height: auto;
