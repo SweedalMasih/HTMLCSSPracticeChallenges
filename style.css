@@ -10,6 +10,7 @@ body {
   color: #444;
   font-family: sans-serif;
   border-top: 10px solid #1098ad;
+  position: relative;
 }
 
 /* This below declaration block will center the content on the page */
@@ -18,6 +19,7 @@ body {
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
+  /* position: relative; */
 }
 
 .main-header {
@@ -148,7 +150,7 @@ article p:first-child {
   color: yellowgreen;
 }
 
-/* styling links: LVHA (apply this in order) */
+/* styling links: LVHA (apply this in order), anchor tag is used to create hyperlinks */
 /* a:link will target all the anchor elements which have a href attribute (only targets real links) */
 a:link {
   color: #1098ad;
@@ -193,3 +195,48 @@ footer p {
   width: 100%;
   height: auto;
 }
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute; /*This will make the element out of normal flow*/
+  bottom: 50px; /* The values for top, right, bottom, left are in relation with the viewport (visible area on page) by default, to make it relative to some other element then that element should be position: relative*/
+  right: 50px;
+}
+
+/* Pseudo-elements don't exist in HTML but we can still select and style in CSS, for e.g. the first letter of a paragraph or the first line of the paragraph */
+/* Pseudo-elements are written using :: and Pseudo-classes are written using : */
+/* Pseudo-elements can be found in browsers HTML tree but not in our code, CSS will automatically create it and put it under the element selected and then styles can be applied */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* Adjacent element or a sibling element is a part of the same parent */
+/* Adjacent sibling is the very next element under the same parent element */
+/* + is the adjacent sibling selector */
+h3 + p::first-line {
+  color: palevioletred;
+}
+
+h2 {
+  /* background-color: aqua; */
+  position: relative;
+}
+
+/* The ::after pseudo-element creates a pseudo-element that will automatically be the very first child of the selected element */
+h2::after {
+  content: "TOP"; /* content property is mandatory to be defined, it can be an empty string if no content needs to be displayed */
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block; /* by default, any pseudo-element is an inline element, so to apply box-model normally, the display should be set as inline-block */
+  padding: 5px 10px;
+  position: absolute; /* the position is relative to h2 */
+  right: -25px;
+  top: -10px;
+}
+
+/* use html validator or div checker to debug HTML code */
