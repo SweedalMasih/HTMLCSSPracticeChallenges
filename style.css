@@ -116,6 +116,7 @@ nav a:link:last-child {
 #author {
   font-style: italic;
   font-size: 16px;
+  /* display: inline-block; */ /* this will make the p element to appear beside the author image */
 }
 
 #copyright {
