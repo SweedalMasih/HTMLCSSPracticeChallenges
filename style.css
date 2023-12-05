@@ -3,6 +3,7 @@
   /* border-top: 10px solid #1098ad; */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* properties added under body gets inherited, for e.g. we want color on all the elements but the color gets inherited hence we added under body. */
@@ -15,7 +16,7 @@ body {
 
 /* This below declaration block will center the content on the page */
 .container {
-  width: 1000px;
+  width: 1500px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
@@ -33,8 +34,7 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding: 50px 0;
-  width: 500px;
+  padding: 50px 40px;
 }
 
 article {
@@ -72,6 +72,7 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 p {
@@ -130,6 +131,7 @@ nav a:link:last-child {
 
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 li:first-child {
@@ -241,3 +243,49 @@ h2::after {
 }
 
 /* use html validator or div checker to debug HTML code */
+
+/* FLOATS */
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  float: left; /* this will make the p text start after the author-img */
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+/* Collapsing elements is a phenomenon where the height of the element becomes zero and this happens because the children elements are floated */
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block; /* because clear gets applied on block level elements */
+}
+
+article {
+  width: 1000px;
+  float: left;
+}
+
+aside {
+  width: 425px;
+  float: right;
+}
+
+footer {
+  clear: both;
+}
