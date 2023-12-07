@@ -78,7 +78,7 @@ h4 {
 p {
   font-size: 22px;
   line-height: 1.5;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 ul,
@@ -106,7 +106,7 @@ li:last-child {
 
 nav a:link {
   margin-right: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: inline-block; /* a is an inline element because of which margin-top will not apply, however when we change the display to inline-block then margin-top will be applied */
 }
 
@@ -245,18 +245,20 @@ h2::after {
 /* use html validator or div checker to debug HTML code */
 
 /* FLOATS */
+
+/*
 .author-img {
   float: left;
   margin-bottom: 20px;
 }
 
 .author {
-  float: left; /* this will make the p text start after the author-img */
+  float: left; /~ this will make the p text start after the author-img ~/
   margin-top: 10px;
   margin-left: 20px;
 }
 
-/* Collapsing elements is a phenomenon where the height of the element becomes zero and this happens because the children elements are floated */
+/~ Collapsing elements is a phenomenon where the height of the element becomes zero and this happens because the children elements are floated ~/
 
 h1 {
   float: left;
@@ -273,7 +275,7 @@ nav {
 .clearfix::after {
   content: "";
   clear: both;
-  display: block; /* because clear gets applied on block level elements */
+  display: block; /~ because clear gets applied on block level elements ~/
 }
 
 article {
@@ -288,4 +290,61 @@ aside {
 
 footer {
   clear: both;
+}
+*/
+
+/* FLEXBOX */
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.related-link:link {
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.related-author {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.row {
+  display: flex;
+  gap: 75px;
+  margin-bottom: 60px;
+}
+
+article {
+  /* flex: 0 0 1000px; */
+  flex: 1; /* this will apply spacing accordingly instead of hardcoding the value*/
+  margin-bottom: 0;
+}
+
+aside {
+  flex: 0 0 425px;
+  align-self: flex-start;
 }

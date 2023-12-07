@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox</title>
     <style>
+      /* To center on the page */
+      /* body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      } */
+
       .el--1 {
         background-color: blueviolet;
       }
@@ -40,6 +48,46 @@
         margin: 40px;
 
         /* FLEXBOX */
+        /* Horizontally, the flex items takes up exactly the space that is necessay for its text content */
+        /* Vertically,its a bit different, by default, all the flex items are as tall as the tallest element, if there's no height defined for any flex item then the height will be to occupy only the space thats necessary for the content */
+        display: flex;
+        align-items: center; /* vertical alignment*/
+        justify-content: center; /* horizontal alignment */
+        gap: 30px; /* this adds space between flex items, this a better option as we can define it in flex container and also for the last element there's no need to remove space as the space will be added only between the flex items, unlike margin-right */
+      }
+
+      .el {
+        /* gap property is a better option to add space between flex items */
+        /* margin-right: 30px;  */
+
+        /* DEFAULTS:
+        flex-grow: 0; 0 means no
+        flex-shrink: 1; 1 means yes
+        flex-basis: auto; this is used to define the width instead of the original width property
+        */
+
+        /* by default flex box is allowed to shrink elements so that it fit the container, so if there is no enough space to fit the items with value (width) defined in flex-basis then flex box is allowed to shrink the items */
+        /* flex-basis: 200px; */
+        /* flex-shrink: 0; */
+        /* flex: 0 0 200px; */
+
+        flex: 1;
+      }
+
+      .el--1 {
+        /* align-self is used to align the flex item selected vertically */
+        align-self: flex-start;
+        /* order: 2; */
+      }
+
+      .el--5 {
+        align-self: stretch;
+        order: 1;
+      }
+
+      .el--6 {
+        align-self: center;
+        order: -1; /* Order is used to place the flex item in an order for e.g. here -1 is used to place the flex item at the first position an 1 will place the flex item at the last position*/
       }
     </style>
   </head>
